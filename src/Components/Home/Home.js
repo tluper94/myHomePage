@@ -20,7 +20,11 @@ function Home() {
      console.log(user, isLoggedIn);
 
      const displayHome = () => {
-          let dragHandlers = { onStart: onStart, onStop: onStop };
+          let dragHandlers = {
+               onStart: onStart,
+               onStop: onStop,
+               bounds: '.home',
+          };
           if (isLoggedIn) {
                return (
                     <div className='home'>
