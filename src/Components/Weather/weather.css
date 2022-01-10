@@ -8,13 +8,41 @@
 
 .weather_current_label {
      margin: 0;
-     font-size: 45px;
+     font-size: 1.2em;
 }
 
 .weather_current_temp {
+     font-size: 1.2em;
      margin: 2px;
 }
 
 .weather_current_icon {
      margin: 2px;
+}
+
+.weather_forecast {
+     display: flex;
+     flex-direction: row;
+}
+.weather_forecast h1 {
+     font-size: 1em;
+}
+
+.weather_forecast h3 {
+     font-size: 1em;
+     margin: 5px;
+}
+
+.weather_forecast img {
+     width: 30px;
+     height: 30px;
+}
+
+.weather_forecast_day {
+     display: flex;
+     margin: 5px;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
 }
