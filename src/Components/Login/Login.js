@@ -2,19 +2,24 @@ import './login.css';
 import { useState } from 'react';
 
 function Login({ setUser, setLoggedIn }) {
-     const [firstName, setFirstName] = useState('');
-     const [lastName, setLastName] = useState('');
-     const [zipCode, setZipCode] = useState('');
+     const [firstName, setFirstName] = useState();
+     const [lastName, setLastName] = useState();
+     const [zipCode, setZipCode] = useState();
 
      console.log('First:', firstName, 'Last:', lastName, 'Zip:', zipCode);
 
      function submit() {
-          setUser({
-               firstName: firstName,
-               lastName: lastName,
-               zipCode: zipCode,
-          });
-          setLoggedIn(true);
+          var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(Number(zipCode));
+          if (firstName && lastName, isValidZip) {
+               setUser({
+                    firstName: firstName,
+                    lastName: lastName,
+                    zipCode: zipCode,
+               });
+               setLoggedIn(true);     
+          } else (
+               alert('Invalid Info')
+          )
      }
 
      return (
