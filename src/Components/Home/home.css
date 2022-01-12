@@ -1,9 +1,32 @@
 .home {
      display: flex;
      height: 100%;
+     width: 100%;
      background: url('../../background.png') no-repeat center fixed;
      background-size: cover;
      overflow: hidden;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+}
+
+.content_container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     width: 80vw;
+     height: 80vh;
+}
+
+.home_greeting {
+     display: flex;
+     color: white;
+     font-size: 10vw;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
 }
 
 .login_container {
@@ -16,13 +39,14 @@
 }
 
 .box {
-     background: rgba(139, 215, 245, 0.322);
+     display: flex;
+     background: rgba(37, 37, 37, 0.842);
      border-radius: 5px;
+     justify-content: center;
      width: fit-content;
      height: fit-content;
-     margin: 10px;
-     padding: 10px;
-     float: left;
+     /* margin: auto; */
+     padding: 0;
      cursor: move;
      color: white;
 }
