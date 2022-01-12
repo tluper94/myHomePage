@@ -30,7 +30,7 @@
 
 .weather_forecast h3 {
      font-size: 1em;
-     margin: 5px;
+     margin: 3px;
 }
 
 .weather_forecast img {
@@ -45,4 +45,39 @@
      justify-content: center;
      align-items: center;
      align-content: center;
+}
+
+@media screen and (max-width: 600px) {
+     .weather_current_label {
+          font-size: 2.8vw;
+     }
+
+     .weather_current_temp {
+          font-size: 3vw;
+          margin: 2px;
+     }
+
+     .weather_current_icon {
+          margin: 2px;
+          width: 8vw;
+          height: 8vw;
+     }
+
+     .weather_forecast h1 {
+          font-size: 2.8vw;
+     }
+
+     .weather_forecast h3 {
+          font-size: 2.8vw;
+          margin: 3px;
+     }
+
+     .weather_forecast img {
+          width: 8vw;
+          height: 8vw;
+     }
+
+     .weather_forecast_day {
+          margin: 5px;
+     }
 }

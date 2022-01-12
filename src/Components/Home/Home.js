@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Login from '../Login/Login';
 import Weather from '../Weather/Weather';
 import Draggable from 'react-draggable';
+import TopBar from '../TopBar/TopBar';
+import Dock from '../Dock/Dock';
 
 function Home() {
      const [user, setUser] = useState({});
@@ -17,8 +19,6 @@ function Home() {
           setactiveDrags(activeDrags - 1);
      };
 
-     console.log(user, isLoggedIn);
-
      const displayHome = () => {
           let dragHandlers = {
                onStart: onStart,
@@ -28,9 +28,16 @@ function Home() {
           if (isLoggedIn) {
                return (
                     <div className='home'>
-                         <Draggable {...dragHandlers}>
-                              <Weather></Weather>
-                         </Draggable>
+                         <TopBar></TopBar>
+                         <div className='content_container'>
+                              <div className='home_greeting'>
+                                   <h1>{`Grettings ${user.firstName}`}</h1>
+                              </div>
+                              <Draggable {...dragHandlers}>
+                                   <Weather user={user}></Weather>
+                              </Draggable>
+                         </div>
+                         <Dock></Dock>
                     </div>
                );
           } else {
